@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: EdgeInsets.only(top: 45.0),
                         child: Container(
                               height: MediaQuery.of(context).size.height -300.0,
-                              child: ListView(
+                              child: ListView( 
                                 children: [
                                   _BuildFoodItem('assets/plate1.png', 'Salmon Bowl', '150.00 \ bath'),
                                   _BuildFoodItem('assets/plate2.png', 'Spring Bowl', '190.00\ bath'),
@@ -148,7 +148,57 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                         ),
                         
-                      )
+                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Container(
+                          height: 65.0,
+                          width: 60.0,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.grey,
+                                style: BorderStyle.solid,
+                                width: 1.0),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(
+                            child: Icon(Icons.search, color: Colors.black),
+                          ),
+                        ),
+                        Container(
+                          height: 65.0,
+                          width: 60.0,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.grey,
+                                style: BorderStyle.solid,
+                                width: 1.0),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(
+                            child: Icon(Icons.shopping_basket, color: Colors.black),
+                          ),
+                        ),
+                        Container(
+                          height: 65.0,
+                          width: 120.0,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Colors.grey,
+                                  style: BorderStyle.solid,
+                                  width: 1.0),
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Color(0xFF1C1428)),
+                          child: Center(
+                              child: Text('Checkout',
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      color: Colors.white,
+                                      fontSize: 15.0))),
+                          )
+                    ],
+                  )
                   ],
               ),
             )
